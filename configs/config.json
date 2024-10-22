@@ -1,0 +1,5 @@
+{
+    "rentsDelayBetweenAccountsMilliseconds": "3000",
+    "claimDelayBetweenAccountsMilliseconds": "15000",
+    "discordWebhook": "https://discord.com/api/webhooks/1297620763645579306/Nzpc5oZ6MIqzKjIVj_Q36D7WRLQFqkhtGNNFhTCMXOI4U31rxOoTK2mTauLKllJ9fgj8"
+}
