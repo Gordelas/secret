@@ -1,19 +1,15 @@
 # Secret Manager
 
-Este projeto é um bot de gerenciamento de contas do [REDACTED]. Ele facilita o processo de verificação de `rents` ([REDACTED] alugados) e `claim` de tarefas automaticamente para contas múltiplas. É especialmente útil para pessoas que gerenciam várias contas.
+Este projeto é um bot de gerenciamento de contas do [REDACTED]. Ele facilita o processo de verificação de `rents` e `claim` de múltiplas contas. É especialmente útil para pessoas que gerenciam várias contas.
 
 ## Funcionalidades
-- **Auto-Claim de Tarefas**: Automatiza a coleta de recompensas das contas do [REDACTED].
+- **Auto-Claim de Quests**: Automatiza a coleta de recompensas das contas do [REDACTED].
 - **Verificação de Rents**: Verifica se uma conta tem a quantidade correta de [REDACTED].
 - **Envio de Webhooks para Discord**: Envia notificações sobre o status da verificação diretamente para um canal do Discord.
 - **Opções de Verificação Específica**: Permite verificar uma conta específica pelo endereço da carteira.
 - **Loop de Verificação de Rents**: Verifica os rents em intervalos configuráveis.
 
-
-
 ---
-
-
 
 ## Instruções de Uso
 
@@ -27,17 +23,17 @@ Antes de começar, certifique-se de ter o seguinte instalado:
 
 1. **Clone este repositório**:
    ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
-   cd nome-do-repositorio
+   git clone https://github.com/Gordelas/secret.git
+   cd secret
    ```
 2. Instale as dependências:
    ```bash
-   npm install
+   npm install fs path axios readline-sync discord-webhook-node chalk@4.1.2
    ```
 3. Configure os arquivos JSON:
 
 - **accounts.json:** Insira as informações das contas do [REDACTED], incluindo accountName, accountWallet, accessToken, e refreshToken.
-- **config.json:** Insira as configurações como ``rentsDelayBetweenAccountsMilliseconds``, ``claimDelayBetweenAccountsMilliseconds``, e o link do webhook do Discord.
+- **config.json:** Insira as configurações como ``rentsDelayBetweenAccountsMilliseconds``, ``claimDelayBetweenAccountsMilliseconds``, e o link do webhook do SEU Discord.
 
 O arquivo ``accounts.json`` armazena as informações de múltiplas contas que serão gerenciadas pelo bot.
    ```json
@@ -60,7 +56,6 @@ O arquivo ``accounts.json`` armazena as informações de múltiplas contas que s
    ```
 
 O arquivo ``config.json`` armazena as configurações gerais, incluindo tempos de espera entre requisições e o webhook do Discord para envio de notificações.
-
 ```json
 {
     "rentsDelayBetweenAccountsMilliseconds": "3000",
@@ -97,14 +92,14 @@ O arquivo ``config.json`` armazena as configurações gerais, incluindo tempos d
 
 5. O accessToken e refreshToken serão copiados para a sua área de transferência.
 
---
+---
 
 ### Como Usar
 Após a configuração dos arquivos ``accounts.json`` e ``config.json``, você pode rodar o bot:
 
 1. Rodar o Bot:
     ```bash
-    node index.js
+    node axie.js
     ```
 2. Escolha a operação desejada no menu:
 	- **1**: Verificar Rents.
