@@ -6,8 +6,11 @@ Este projeto é um bot de gerenciamento de contas do [REDACTED]. Ele facilita o 
 - **Auto-Claim de Quests**: Automatiza a coleta de recompensas das contas do [REDACTED].
 - **Verificação de Rents**: Verifica se uma conta tem a quantidade correta de [REDACTED].
 - **Envio de Webhooks para Discord**: Envia notificações sobre o status da verificação diretamente para um canal do Discord.
-- **Opções de Verificação Específica**: Permite verificar uma conta específica pelo endereço da carteira.
+- **Opções de Verificação Específica**: Permite verificar uma conta específica pelo endereço da carteira, retornando mais informações sobre cada Axie.
 - **Loop de Verificação de Rents**: Verifica os rents em intervalos configuráveis.
+- **Abrir navegadores automaticamente**: Abre navegadores que tiverem um prefixo. (OBSOLETO)
+  - Account 1 - nome 
+  - Account 2 - name
 
 ---
 
@@ -58,6 +61,9 @@ O arquivo ``accounts.json`` armazena as informações de múltiplas contas que s
 O arquivo ``config.json`` armazena as configurações gerais, incluindo tempos de espera entre requisições e o webhook do Discord para envio de notificações.
 ```json
 {
+    "chromePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "profilePrefix": "Axie",
+    "browserOpenDelayMilliseconds": "2000",
     "rentsDelayBetweenAccountsMilliseconds": "3000",
     "claimDelayBetweenAccountsMilliseconds": "15000",
     "discordWebhook": "https://discord.com/api/webhooks/seu_webhook_aqui"
@@ -102,11 +108,13 @@ Após a configuração dos arquivos ``accounts.json`` e ``config.json``, você p
     node axie.js
     ```
 2. Escolha a operação desejada no menu:
-	- **1**: Verificar Rents.
-	- **2**: Claimar Quests.
-	- **3**: Verificar Rent Específico.
-	- **4**: Loop de Verificação de Rents.
-	- **5**: Sair.
+	- **1**: Verificar Rents
+	- **2**: Claimar Quests
+	- **3**: Verificar Rent Específico
+	- **4**: Loop de Verificação de Rents
+	- **5**: Abrir perfis Chrome
+
+	- **0**: Sair.
 
 
 ---
