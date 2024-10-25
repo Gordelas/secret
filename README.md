@@ -1,4 +1,3 @@
-@ -1,2 +1,120 @@
 # Secret Manager
 
 Este projeto é um bot de gerenciamento de contas do [REDACTED]. Ele facilita o processo de verificação de `rents` e `claim` de múltiplas contas. É especialmente útil para pessoas que gerenciam várias contas.
