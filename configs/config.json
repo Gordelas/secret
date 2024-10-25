@@ -1,0 +1,5 @@
+{
+    "rentsDelayBetweenAccountsMilliseconds": "3000",
+    "claimDelayBetweenAccountsMilliseconds": "15000",
+    "discordWebhook": ""
+}

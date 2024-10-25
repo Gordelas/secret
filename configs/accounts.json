@@ -1,0 +1,10 @@
+{
+    "Axie": [
+        {
+            "accountName": "Axie Número - Nome",
+            "accountWallet": "Account Wallet",
+            "accessToken": "Access Token",
+            "refreshToken": "Refresh Token"
+        },
+    ]
+}
